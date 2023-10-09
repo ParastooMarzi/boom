@@ -1,0 +1,210 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e8d4e6, #b2cff4);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+}
+
+.container {
+  background: linear-gradient(to right, #c4dde3, #e2c9e4);
+  border-radius: 10px;
+  width: 1000px;
+  padding: 30px 35px 35px;
+  box-shadow: 0 10px 20px #0000001a;
+}
+
+.container.disable .editor-panel, .container.disable .controls .reset-filter, .container.disable .controls .save-img {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.container h2 {
+  margin-top: -8px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.container .wrapper {
+  min-height: 335px;
+  margin: 20px 0;
+  display: flex;
+}
+
+.wrapper .editor-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 280px;
+  padding: 15px 20px;
+}
+
+.editor-panel .title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  display: block;
+}
+
+.editor-panel .options, .controls {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.editor-panel button {
+  color: #6c757d;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  outline: none;
+  height: 40px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.editor-panel .filter button {
+  width: calc(50% - 4px);
+}
+
+.editor-panel button:hover {
+  background: #f5f5f5;
+}
+
+.filter button.active {
+  color: #fff;
+  background: #5372f0;
+  border-color: #5372f0;
+}
+
+.filter .slider {
+  margin-top: 12px;
+}
+
+.filter .slider .filter-info {
+  color: #464646;
+  justify-content: space-between;
+  font-size: 14px;
+  display: flex;
+}
+
+.filter .slider input {
+  accent-color: #5372f0;
+  width: 100%;
+  height: 5px;
+}
+
+.editor-panel .rotate {
+  margin-top: 17px;
+}
+
+.editor-panel .rotate button {
+  justify-content: center;
+  align-items: center;
+  width: calc(25% - 3px);
+  display: flex;
+}
+
+.rotate .options button:nth-child(3), .rotate .options button:nth-child(4) {
+  font-size: 18px;
+}
+
+.rotate .options button:active {
+  color: #fff;
+  background: #5372f0;
+  border-color: #5372f0;
+}
+
+.wrapper .preview-img {
+  border-radius: 5px;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  display: flex;
+  overflow: hidden;
+}
+
+.preview-img img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 490px;
+  height: 100%;
+  max-height: 335px;
+}
+
+.controls button {
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 11px 20px;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+.controls .reset-filter {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.controls .reset-filter:hover {
+  color: #fff;
+  background: #6c757d;
+}
+
+.controls .choose-img {
+  background: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.controls .save-img {
+  background: #5372f0;
+  border: 1px solid #5372f0;
+  margin-left: 5px;
+}
+
+@media screen and (width <= 760px) {
+  .container {
+    padding: 25px;
+  }
+
+  .container .wrapper {
+    flex-wrap: wrap-reverse;
+  }
+
+  .wrapper .editor-panel {
+    width: 100%;
+  }
+
+  .wrapper .preview-img {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (width <= 500px) {
+  .controls button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .controls .row {
+    width: 100%;
+  }
+
+  .controls .row .save-img {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=simpleEditor.04e465e5.css.map */
